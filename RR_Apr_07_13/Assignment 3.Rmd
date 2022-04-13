@@ -1,6 +1,6 @@
 ---
 title: "Exercise 2"
-author: "Wojciech Hardy; Łukasz Nawaro"
+author: "Sang Luong"
 date: "3/29/2022"
 output: 
   html_document
@@ -54,6 +54,6 @@ Finally, the episodes with the above-average viewership were:
 
 ```{r, warning=FALSE}
 library(knitr)
-kable(season_data[season_data$viewers > mean(season_data$viewers),c('no_season','title','directed_by')]) 
+kable(season_data[season_data$viewers > mean(season_data$viewers),c('no_season','title','directed_by')], row.names = F) 
 ```
 
