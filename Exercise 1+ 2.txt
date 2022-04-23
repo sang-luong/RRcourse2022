@@ -1,0 +1,32 @@
+- Exercise 1: FizzBuzz Problem
+
+for i in range(1,101):
+    print('Fizz'*(not i%3)+'Buzz'*(not i%5) or i)
+
+- Exercise 2: 
+2.1 )
+def largestFibo(N: float) -> int:
+    """ The function take N (float or integer) as a parameter.
+        Return: the largest Fibonacci number smaller than N """
+    result = [] # initial list of Fibonacci number
+    for i in range(1, math.ceil(N + 1)):
+        value = fibonacci(i)
+        if value < N:
+            result.append(value)
+        else:
+            #if the value is greater or equal to N
+            #then the last value is in result list is actual a largest number
+            #that is smaller than N
+            break
+    return result[-1]
+
+2.2)
+def reverse(number: int) -> int:
+    """ The function take N (integer) as a parameter.
+        Return: the opposite order of number"""
+    list_number = list(str(number)) 
+    list_reverse = []
+    new_number = ''
+    for i in range(len(list_number)-1, -1, -1): #create a backward loop, with specific step = -1
+        list_reverse.append(list_number[i])
+    return int(new_number.join(list_reverse))
