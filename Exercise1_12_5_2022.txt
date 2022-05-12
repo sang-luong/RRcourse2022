@@ -1,0 +1,1 @@
+-rw-rw-r-- 1 s_luong s_luong 0 May 12 13:16 test.txt
